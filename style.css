@@ -17,11 +17,11 @@ background-color: aliceblue;
 }
 .container{
     background-color: darkblue;
-    width:20%;
+    width:350px;
     height: 65vh;
     padding: 10px;
     padding-top: 20px;
-    padding-bottom:30px;
+    padding-bottom:10px;
     border-radius: 10px;
     box-shadow: 5px 5px 20px whitesmoke,
          -5px -5px 20px black;
@@ -93,3 +93,6 @@ background-color: aliceblue;
     inset  -5px -5px 8px #fff;
     background: #fff;
 }
+
+
+
