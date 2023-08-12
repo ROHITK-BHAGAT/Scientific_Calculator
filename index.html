@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="icon" type="image/x-icon" href="/favicon/calculator_icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+        My Calculator
+    </div>
+    
+    <div class="container">
+        <div class="display">
+            <input id="screen" type="text" placeholder="0">
+        </div>
+        <div class="btn">
+            <div class="row">
+                <button onclick="square()" class="btns">x&#178;</button>
+                <button onclick="fact('!')" class="btns">x!</button>
+                <button onclick="calculate('&#40;')" class="btns">&#40;</button>
+                <button onclick="calculate('&#41;')" class="btns">&#41;</button>
+                <button onclick="sqrinv()" class="btns">x<sup>-1</sup></button>
+
+            </div>
+            <div class="row">
+                <button onclick="sqrt2('\u221A')" class="btns">&#8730;</button>
+                <button onclick="sin('sin\u0028')" class="btns">sin</button>
+                <button onclick="cos('cos\u0028')" class="btns">cos</button>
+                <button onclick="tan('tan\u0028')" class="btns">tan</button>
+                <button onclick="calculate('2.71828747')" class="btns">e</button>
+
+            </div>
+            <div class="row">
+                <button onclick="rad('rad\u0028')" class="btns">rad</button>
+                <button onclick="sininv('arcsin\u0028')" class="btns">sin<sup>-1</sup></button>
+                <button onclick="cosinv('arccos\u0028')" class="btns">cos<sup>-1</sup></button>
+                <button onclick="taninv('arctan\u0028')" class="btns">tan<sup>-1</sup></button>
+                <button onclick="expo('exp\u0028')" class="btns">exp</button>
+
+            </div>
+            <div class="row">
+                <button  onclick="calculate(7)" class="btns">7</button>
+                <button onclick="calculate(8)" class="btns">8</button>
+                <button onclick="calculate(9)" class="btns">9</button>
+                <button onclick="del()" class="btns btns1">DEL</button>
+                <button onclick="clr()" class="btns btns1">AC</button>
+
+            </div>
+            <div class="row">
+                <button onclick="calculate(4)" class="btns">4</button>
+                <button onclick="calculate(5)" class="btns">5</button>
+                <button onclick="calculate(6)" class="btns">6</button>
+                <button onclick="calculate('*')" class="btns">&#8727;</button>
+                <button onclick="calculate('/')" class="btns">&#47;</button>
+
+            </div>
+            <div class="row">
+                <button onclick="calculate(1)" class="btns">1</button>
+                <button onclick="calculate(2)" class="btns">2</button>
+                <button onclick="calculate(3)" class="btns">3</button>
+                <button onclick="calculate('+')" class="btns">&#43;</button>
+                <button onclick="calculate('-')" class="btns">&#8722;</button>
+
+            </div>
+            <div class="row">
+                <button onclick="calculate(0)" class="btns">0</button>
+                <button onclick="percentage('%')" class="btns">%</button>
+                <button onclick="pi('3.14')"class="btns">&#8508;</button>
+                <button onclick="calculate('.')" class="btns">&#x2022;</button>
+                <button onclick="output()" class="btns btns2">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script> 
+</body>
+</html>

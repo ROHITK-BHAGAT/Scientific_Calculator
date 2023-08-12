@@ -1,0 +1,94 @@
+.heading{
+    position:relative;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 19px;
+}
+body{
+padding: 0;
+margin: 0;
+display:flex;
+flex-direction: column;
+
+align-items: center;
+min-height: 100vh;
+background-color: aliceblue;
+
+}
+.container{
+    background-color: darkblue;
+    width:20%;
+    height: 65vh;
+    padding: 10px;
+    padding-top: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px whitesmoke,
+         -5px -5px 20px black;
+}
+.display #screen{
+    width: 95%;
+    height: 70px;
+    font-size: 40px;
+    outline: none;
+    border: none;
+    text-align: right;
+    padding-right: .3em;
+    background: #ecf0f3;
+    border-radius: 3px;
+    box-shadow: inset 2px 2px 2px #ebced1,
+                inset -2px -2px 2px #ffffff;
+
+
+}
+.row{
+    padding-top: 20px;
+    margin-top: 0.1em;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    display: flex;
+    justify-content:space-between;
+    
+    flex-wrap: wrap;
+}
+.btn{
+    padding-top: 20px;
+}
+
+
+.btns{
+    width:47px;
+    height:32px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-right: 5px;
+    margin-top: 2px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 8px black,
+    -5px -5px 8px black;
+    transition: .5s;
+}
+.btns1{
+    background-color: orange;
+}
+.btns1:hover{
+    box-shadow: inset  5px 5px 8px rgba(16, 16, 16, .1),
+    inset  -5px -5px 8px orange!important;
+    background-color: orange!important;
+}
+.btns2{
+    background-color: red;
+}
+.btns2:hover{
+    box-shadow: inset  5px 5px 8px rgba(16, 16, 16, .1),
+    inset  -5px -5px 8px red!important;
+    background-color: red!important;
+}
+
+.btn .row button:hover{
+    
+    box-shadow: inset  5px 5px 8px rgba(16, 16, 16, .1),
+    inset  -5px -5px 8px #fff;
+    background: #fff;
+}
