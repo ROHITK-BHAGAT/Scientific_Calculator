@@ -5,23 +5,9 @@ var new_num;
 
 function calculate(number) {
     result.value = result.value + number;
-
 }
-
 function output() {
     try {
-        if (new_num == '%') {
-
-            let a = result.value;
-            b = a.split("/");
-            x = b[0];
-            y = b[1].split("%");
-            z = y[0];
-            o= (x / z) * 100;
-            result.value=o.toFixed(5);
-
-
-        }
         if (new_num == '!') {
 
             var a = 1;
@@ -42,6 +28,14 @@ function output() {
             q = p[1];
             result.value = Math.sqrt(q);
 
+        }
+        if (new_num == 'rad\u0028') {
+            p = result.value.split("rad\u0028");
+            q = p[1];
+            t = q.split(')');
+            u = t[0];
+            r = u * (Math.PI / 180);
+            result.value = r.toFixed(5);
         }
         if (new_num == 'sin\u0028') {
             p = result.value.split("sin\u0028");
@@ -67,13 +61,34 @@ function output() {
             r = u * (Math.PI / 180);
             result.value = Math.tan(r).toFixed(5);
         }
-        if (new_num == 'rad\u0028') {
-            p = result.value.split("rad\u0028");
+        if (new_num == 'arcsin\u0028') {
+            p = result.value.split("arcsin\u0028");
             q = p[1];
             t = q.split(')');
             u = t[0];
-            r = u * (Math.PI / 180);
-            result.value = r.toFixed(5);
+            r = Math.asin(u);
+            s = r * (180 / Math.PI);
+            result.value = s.toFixed();
+
+        }
+        if (new_num == 'arccos\u0028') {
+            p = result.value.split("arccos\u0028");
+            q = p[1];
+            t = q.split(')');
+            u = t[0];
+            r = Math.acos(u);
+            s = r * (180 / Math.PI);
+            result.value = s.toFixed();
+
+        }
+        if (new_num == 'arctan\u0028') {
+            p = result.value.split("arctan\u0028");
+            q = p[1];
+            t = q.split(')');
+            u = t[0];
+            r = Math.atan(u);
+            s = r * (180 / Math.PI);
+            result.value = s.toFixed();
 
         }
         if (new_num == 'exp\u0028') {
@@ -81,42 +96,20 @@ function output() {
             q = p[1];
             t = q.split(')');
             u = t[0];
-            r = 2.71828747**u;
-            result.value =r.toFixed(5);
+            r = 2.71828747 ** u;
+            result.value = r.toFixed(5);
 
         }
-        if(new_num == 'arcsin\u0028'){
-            p = result.value.split("arcsin\u0028");
-            q = p[1];
-            t = q.split(')');
-            u = t[0];
-            r=Math.asin(u);
-            s=r* (180/Math.PI);
-            result.value =s.toFixed();
+        if (new_num == '%') {
 
+            let a = result.value;
+            b = a.split("/");
+            x = b[0];
+            y = b[1].split("%");
+            z = y[0];
+            o = (x / z) * 100;
+            result.value = o.toFixed(5);
         }
-        if(new_num == 'arccos\u0028'){
-            p = result.value.split("arccos\u0028");
-            q = p[1];
-            t = q.split(')');
-            u = t[0];
-            r=Math.acos(u);
-            s=r* (180/Math.PI);
-            result.value =s.toFixed();
-
-        }
-        if(new_num == 'arctan\u0028'){
-            p = result.value.split("arctan\u0028");
-            q = p[1];
-            t = q.split(')');
-            u = t[0];
-            r=Math.atan(u);
-            s=r* (180/Math.PI);
-            result.value =s.toFixed();
-
-        }
-
-
         result.value = eval(result.value);
     }
     catch (error) {
@@ -124,16 +117,24 @@ function output() {
     }
 }
 
-function clr() {
-    result.value = "";
+function square() {
+
+    result.value = Math.pow(result.value, 2);
 }
-function del() {
-    result.value = result.value.slice(0, -1);
+function fact(number) {
+    result.value += number;
+    new_num = number;
+}
+function sqrinv() {
+    result.value = Math.pow(result.value, -1);
+}
+function sqrt2(number) {
+    new_num = number;
+    result.value += number;
 }
 function sin(number) {
     new_num = number;
     result.value += number;
-
 }
 function cos(number) {
     new_num = number;
@@ -147,61 +148,37 @@ function rad(number) {
     new_num = number;
     result.value += number;
 }
-
-
-
-function square() {
-
-    result.value = Math.pow(result.value, 2);
+function clr() {
+    result.value = "";
 }
-function sqrt2(number) {
+function del() {
+    result.value = result.value.slice(0, -1);
+}
+function sininv(number) {
     new_num = number;
     result.value += number;
 
-}
-function sqrinv() {
-    result.value = Math.pow(result.value, -1);
-}
-
-function sininv(number) {
-    new_num=number;
-    result.value+=number;
-    
 }
 function cosinv(number) {
-    new_num=number;
-    result.value+=number;
-    
+    new_num = number;
+    result.value += number;
+
 }
 function taninv(number) {
-    new_num=number;
-    result.value+=number;
-    
+    new_num = number;
+    result.value += number;
+
 }
 function pi(number) {
-    new_num=number;
-    result.value+=Math.PI.toFixed(5);
-    //result.value = Math.PI.toFixed(4);
-}
-
-
-function fact(number) {
-    result.value += number;
     new_num = number;
-
+    result.value += Math.PI.toFixed(4);
 
 }
-
 function expo(number) {
     new_num = number;
     result.value += number;
-
-
-
 }
 function percentage(number) {
     new_num = number;
     result.value += number;
-
-
 }
